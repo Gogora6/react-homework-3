@@ -1,7 +1,7 @@
 import { Route, Switch, useHistory } from 'react-router';
-import SignInForm from './components/forms/SignInForm';
-import SignUpForm from './components/forms/SignUpForm';
 import Navigation from './components/navigation';
+import SignIn from './pages/auth/SignIn';
+import SignUp from './pages/auth/SignUp';
 
 function App() {
   const history = useHistory();
@@ -15,10 +15,10 @@ function App() {
       <Navigation />
       <Switch>
         <Route path="/register">
-          <SignUpForm />
+          <SignUp />
         </Route>
         <Route path="/login">
-          <SignInForm/>
+          <SignIn />
         </Route>
         <Route path="/blogs">
           <h1>Blogs</h1>

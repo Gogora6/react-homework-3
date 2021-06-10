@@ -1,26 +1,27 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router';
+import { login } from '../../../services';
 
 const SignInForm = (props) => {
   const [message, setMessage] = useState('');
   const { register, handleSubmit } = useForm();
   const history = useHistory();
 
-  // const onSubmit = async (data) => {
-  //   const { token } = await login(data);
-  //   console.log(token);
-  //   if (token) {
-  //     localStorage.setItem('auth.token', JSON.stringify(token));
-  //     history.replace('/');
-  //   } else {
-  //     setMessage('These credentials are incorrect!!');
-  //   }
-  // };
+  const onSubmit = async (data) => {
+    const { token } = await login(data);
+    console.log(token);
+    if (token) {
+      localStorage.setItem('auth.token', JSON.stringify(token));
+      history.replace('/blogs');
+    } else {
+      setMessage('These credentials are incorrect!!');
+    }
+  };
   return (
     <main className="form-signin ">
       <h5 className="text-danger">{message}</h5>
-      <form className="form" onSubmit={handleSubmit()}>
+      <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <br />
         <br />
         <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
