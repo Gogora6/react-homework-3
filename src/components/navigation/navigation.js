@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 
 const Navigation = (props) => {
   return (
@@ -15,8 +15,13 @@ const Navigation = (props) => {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/blogs" exact>
+          <NavLink className="nav-link" to="/blogs">
             Blogs
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/" exact>
+            <Redirect to="/login" />
           </NavLink>
         </li>
       </ul>
