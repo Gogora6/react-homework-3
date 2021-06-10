@@ -1,17 +1,29 @@
-import { Route, Switch } from 'react-router';
+import { Route, Switch, useHistory } from 'react-router';
+import SignUpForm from './components/forms/SignUpForm';
 import Navigation from './components/navigation';
-import SignIn from './pages/auth';
+
 function App() {
+  const history = useHistory();
+
+  const onLogOut = () => {
+    localStorage.removeItem('auth.token');
+    history.replace('/');
+  };
   return (
     <div className="container">
       <Navigation />
-      <h1>HomeWork2 </h1>
       <Switch>
-        <Route path="/index">
-        <h1>Index </h1>
+        <Route path="/register">
+          <SignUpForm />
         </Route>
-        <Route path="/home">
-            <h1>Home</h1>
+        <Route path="/login">
+          <h1>Login Page</h1>
+        </Route>
+        <Route path="/blogs">
+          <h1>Blogs</h1>
+          <button className="btn btn-primary" onClick={onLogOut}>
+            Log out
+          </button>
         </Route>
       </Switch>
     </div>
