@@ -1,4 +1,5 @@
 import { Route, Switch, useHistory } from 'react-router';
+import BlogList from './components/list/companies/BlogPostList';
 import Navigation from './components/navigation';
 import SignIn from './pages/auth/SignIn';
 import SignUp from './pages/auth/SignUp';
@@ -21,10 +22,11 @@ function App() {
           <SignIn />
         </Route>
         <Route path="/blogs">
-          <h1>Blogs</h1>
           <button className="btn btn-primary" onClick={onLogOut}>
             Log out
           </button>
+          <BlogList />
+
         </Route>
       </Switch>
     </div>
