@@ -1,4 +1,5 @@
 import { Route, Switch, useHistory } from 'react-router';
+import SignInForm from './components/forms/SignInForm';
 import SignUpForm from './components/forms/SignUpForm';
 import Navigation from './components/navigation';
 
@@ -17,7 +18,7 @@ function App() {
           <SignUpForm />
         </Route>
         <Route path="/login">
-          <h1>Login Page</h1>
+          <SignInForm/>
         </Route>
         <Route path="/blogs">
           <h1>Blogs</h1>
