@@ -23,7 +23,7 @@ const SignInForm = (props) => {
       <form className="form" onSubmit={handleSubmit()}>
         <br />
         <br />
-        <h1 className="h3 mb-3 fw-normal">Please sign in<input type="text" name="" id="" /></h1>
+        <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
         <div className="form-floating">
           <input
