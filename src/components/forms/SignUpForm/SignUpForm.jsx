@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router';
 
-const SignInForm = (props) => {
+const SignUpForm = (props) => {
   const [message, setMessage] = useState('');
   const { register, handleSubmit } = useForm();
   const history = useHistory();
@@ -64,4 +64,4 @@ const SignInForm = (props) => {
   );
 };
 
-export default SignInForm;
+export default SignUpForm;
