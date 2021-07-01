@@ -14,6 +14,7 @@ const SignInForm = (props) => {
     if (token) {
       localStorage.setItem('auth.token', JSON.stringify(token));
       history.replace('/profile');
+
     } else {
       setMessage('These credentials are incorrect!!');
     }

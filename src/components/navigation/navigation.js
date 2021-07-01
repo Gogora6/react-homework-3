@@ -22,6 +22,12 @@ const Navigation = (props) => {
         <li className="nav-item">
           <NavLink className="nav-link" to="/" exact>
             <Redirect to="/login" />
+
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/" exact>
+            <Redirect to="/login" />
           </NavLink>
         </li>
       </ul>
