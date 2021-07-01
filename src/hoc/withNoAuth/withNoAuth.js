@@ -9,7 +9,7 @@ export const withNoAuth = (Component) => {
 
     const token = JSON.parse(localStorage.getItem("auth.token"));
     if (token) {
-      return <Redirect to="/blogs" />;
+      return <Redirect to="/profile" />;
     }
     return <Component {...props} />;
   };

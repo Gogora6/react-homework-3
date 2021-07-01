@@ -1,5 +1,4 @@
-import { NavLink } from 'react-router-dom';
-import SignUpForm from '../forms/SignUpForm';
+import { NavLink, Redirect } from 'react-router-dom';
 
 const Navigation = (props) => {
   return (
@@ -16,8 +15,13 @@ const Navigation = (props) => {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/blogs" exact>
-            Blogs
+          <NavLink className="nav-link" to="/profile">
+            Profile
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/" exact>
+            <Redirect to="/login" />
           </NavLink>
         </li>
       </ul>
