@@ -1,8 +1,5 @@
 import { Route, Switch, useHistory } from 'react-router';
-<<<<<<< HEAD
-=======
 import BlogList from './components/list/companies/BlogPostList';
->>>>>>> 1b6399ded9ad082abb730a8f850295145313f65c
 import Navigation from './components/navigation';
 import SignIn from './pages/auth/SignIn';
 import SignUp from './pages/auth/SignUp';
