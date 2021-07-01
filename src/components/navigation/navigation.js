@@ -30,6 +30,7 @@ const Navigation = (props) => {
             <Redirect to="/login" />
           </NavLink>
         </li>
+        
       </ul>
     </header>
   );

@@ -2,6 +2,7 @@ import { Route, Switch, useHistory } from 'react-router';
 import Navigation from './components/navigation';
 import SignIn from './pages/auth/SignIn';
 import SignUp from './pages/auth/SignUp';
+import UserProfile from './pages/UserProfile/UserProfile';
 
 function App() {
   const history = useHistory();
@@ -21,7 +22,8 @@ function App() {
           <SignIn />
         </Route>
         <Route path="/profile">
-          <h1>Profile</h1>
+          <UserProfile />
+
 
           <button className="btn btn-primary" onClick={onLogOut}>
             Log out

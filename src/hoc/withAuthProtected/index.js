@@ -1,1 +1,4 @@
-export { withAuthProtected } from './withAuthProtected';
+import { withAuthProtected } from './withAuthProtected';
+
+
+export default withAuthProtected;
